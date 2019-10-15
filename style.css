@@ -1,0 +1,368 @@
+/* FontSquirrel generator */
+@font-face {
+    font-family: 'vtks_morning_rain_3dregular';
+    src: url('fonts/3D-free-font/vtks_morning_rain_3d-webfont.eot');
+    src: url('fonts/3D-free-font/vtks_morning_rain_3d-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/3D-free-font/vtks_morning_rain_3d-webfont.woff2') format('woff2'),
+    url('fonts/3D-free-font/vtks_morning_rain_3d-webfont.woff') format('woff'),
+    url('fonts/3D-free-font/vtks_morning_rain_3d-webfont.ttf') format('truetype'),
+    url('fonts/3D-free-font/vtks_morning_rain_3d-webfont.svg#vtks_morning_rain_3dregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+h1,
+p{
+    font-family: 'Roboto Mono', monospace;
+}
+
+h5{
+    font-family: 'Lato', sans-serif;
+    color: #100d0B;
+    font-size: 18px;
+}
+p{
+    font-size: 12px;
+}
+
+i{
+    margin-right: 15px;
+}
+
+.col-1-2{
+    width: 502px;
+}
+.col-1-3{
+    width: 328px;
+}
+
+.col {
+    float: left;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.last {
+    margin-right: 0px !important;
+}
+.clear{
+    clear:both;
+}
+
+.content{
+    width: 1024px;
+    background-color: #fff;
+    padding-top: 71px;
+    margin: 0 auto;
+}
+
+.logo{
+    background-color: rgba(169,170,175,0.7);
+    width: auto;
+    color: #000;
+    position: absolute; top: 31%; left: 9%;
+    font-size: 28px;
+    padding: 4px 5px;
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    background-color: #433F36;
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left:0;
+    box-shadow: 0 0 5px 5px rgba(170,176,160,.3);
+}
+.puzzle-section{
+    margin-left: 356px;
+    margin-bottom: 100px;
+}
+button{
+    width: 110px;
+    text-transform: uppercase;
+    background-color: #b0aaa0;
+    border-radius: 4px;
+    margin: 20px 90px;
+    padding: 7px 4px;
+}
+footer{
+    height: auto;
+    background-color: #433F36;
+    text-align: center;
+    color: #b0aaa0;
+    position: relative;
+    bottom: 0;
+    z-index: 30;
+    padding: 10px 0;
+}
+footer a{
+    color: #b0aaa0;
+    padding: 20px 0;
+    /*text-decoration-style: double;*/
+    font-size: 20px;
+}
+footer p{
+    font-size: 20px;
+}
+
+.txt-logo{
+    font-family: 'vtks_morning_rain_3dregular';
+    font-size: 30px;
+    color: #261a13;
+    position: absolute; top: 20px; left: 100px;
+    background-color:rgba(170,176,160,.1) ;
+    padding: 0 4px;
+    box-shadow: 9px -6px 15px 5px rgba(16,13,11,0.7);
+}
+.link-a{
+    position: absolute; top: 61px; right: 160px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #b0aaa0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link-a:hover{
+    border-bottom-color: chartreuse;
+}
+
+/*  SLIDESHOW   */
+#slideshow {
+
+    position: relative;
+    width: 640px;
+    height: 310px;
+    padding: 5px;
+    margin: 100px auto;
+    border: 1px solid #ddd;
+    background: #FFF;
+    background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+#slideshow:before,
+#slideshow:after {
+    position: absolute;
+    bottom: 16px;
+    z-index: -10;
+    width: 50%;
+    height: 20px;
+    content: "";
+    background: rgba(0, 0, 0, 0.1);
+    /*border-radius: 50%;*/
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 20px 10px rgba(0, 0, 0, 0.7);
+}
+
+#slideshow:before {
+    left: 0;
+    transform: rotate(-4deg);
+}
+
+#slideshow:after {
+    /*right: 0;*/
+    transform: rotate(4deg);
+}
+
+/* gestion des dimensions et débordement du conteneur */
+
+#slideshow .container {
+    position: relative;
+    width: 640px;
+    height: 310px;
+    overflow: hidden;
+}
+
+/* espace gris pour la timeline */
+
+#slideshow .container:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #999;
+}
+
+#slideshow .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400%;
+    height: 310px;
+    animation: slider 30s infinite;
+}
+
+/* annulation des marges sur figure */
+
+#slideshow figure {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+/*  effet vignette sur les images */
+#slideshow figure:after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+}
+
+#slideshow figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    padding: 20px;
+    margin: 0;
+    border-top: 1px solid rgb(225, 225, 225);
+    text-align: center;
+    letter-spacing: 0.05em;
+    word-spacing: 0.05em;
+    font-family: Georgia, Times, serif;
+    background: rgba(255, 255, 255, 0.7);
+    color: #555;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3);
+    animation: figcaptionner 30s infinite;
+}
+
+summary{
+    color: #3a2A1C;
+}
+
+/* animation function */
+@keyframes slider {
+    0%,
+    20%,
+    100% {
+        left: 0
+    }
+    25%,
+    45% {
+        left: -100%
+    }
+    50%,
+    70% {
+        left: -200%
+    }
+}
+
+/*  pour Opera */
+@-o-keyframes slider {
+    0%,
+    20%,
+    100% {
+        left: 0
+    }
+    25%,
+    45% {
+        left: -100%
+    }
+    50%,
+    70% {
+        left: -200%
+    }
+}
+
+/*  pour Gecko (Mozilla) */
+@-moz-keyframes slider {
+    0%,
+    20%,
+    100% {
+        left: 0
+    }
+    25%,
+    45% {
+        left: -100%
+    }
+    50%,
+    70% {
+        left: -200%
+    }
+
+}
+
+/* pour Webkit (Chrome, Safari, Android...) */
+@-webkit-keyframes slider {
+    0%,
+    20%,
+    100% {
+        left: 0
+    }
+    25%,
+    45% {
+        left: -100%
+    }
+    50%,
+    70% {
+        left: -200%
+    }
+
+}
+
+/*  pour Microsoft (Internet Explorer) */
+
+@-ms-keyframes slider {
+    0%,
+    20%,
+    100% {
+        left: 0
+    }
+    25%,
+    45% {
+        left: -100%
+    }
+    50%,
+    70% {
+        left: -200%
+    }
+
+}
+
+/*#timeline {
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    height: 3px;
+    !*background: rgb(230, 70, 1);*!
+    background: rgba(230, 70, 1, .5);
+    !*background: rgb(214,98,13);
+	background: rgba(214,98,13,.8);*!
+    width: 0;
+    !* fonction d'animation *!
+    animation: timeliner 30s infinite;
+}*/
+/*
+
+@keyframes timeliner {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        width: 0;
+    }
+    20%,
+    45%,
+    70%,
+    90% {
+        width: 640px;
+    }
+}
+
+*/
+
+/* JS side - PUZZLE */
+#canvas{
+    width : 70%;
+    border: 2px solid #111111;
+    margin: 5% 17%;
+}
